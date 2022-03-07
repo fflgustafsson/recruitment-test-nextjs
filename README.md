@@ -1,34 +1,80 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Recruitment Repo / Tasks
+
+This exercise is to see:
+
+- how well you can understand typescript, react and tailwind.
+- How well you structure your components
+- How well you implement mobile responsiveness
+
+The app is a master -> detail app of one of our demo project.
+
+I would like you to fork this repo on github and when you are done I can simply look at it there.
+Once you have completed the tasks we can go through your code together.
+
+### List View
+
+Create the list view so that it contains the same info as the original
+https://view.wec360.com/demo/brf-traffen/lagenheter
+
+Fields:
+
+- Floorplan image
+- name
+- price
+- monthlyFee
+- livingArea
+- rooms
+- floor
+- status badge
+
+Functionality:
+
+- The unit row should have a hover state
+- When clicking the row we should navigate to the detail view
+- it should be fully responsive so it looks good all the way from mobile to desktop
+
+**Note** I have created a pages/test.tsx file with some demos and helper functions
+
+### Detail View
+
+Create a detail view that displays the unit.
+https://view.wec360.com/demo/brf-traffen/unit/1001
+
+Since we have limited time, we won't be able to implement the full unit page.
+The important part for me is to see how well you handle splitting the above page into it's components.
+Everything should be in typescript and fully typed.
+I also want you to use as much of tailwind as possible, only falling back to css if absolutely necessary.
+
+Components:
+
+- Image header
+- Unit name and status
+- Fact box with price, monthlyFee, rooms, floor
+
+Functionality:
+
+- important that everything is responsive
+- Image Header should take up 60vh but not become over 500px high
+
+### Questions
+
+If you have any questions please contact me at leon@wec360.com and I'll answer them as soon as possible.
 
 ## Getting Started
 
-First, run the development server:
+Install Node.js v16 or above
+
+then run
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+## Learning Resources
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [Next.js](https://nextjs.org/) - The view framework
+- [Tailwind](https://tailwindcss.com/) - The main css library we are using
+- [Jest](https://jestjs.io/) - Testing library that you can use to test your components if you like
