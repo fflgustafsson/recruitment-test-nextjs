@@ -2,7 +2,7 @@
 import {unitFactModel} from '../../data-access';
 
 export interface UnitFactProps {
-  heading?: string,
+  heading: string,
   textClass?: string,
   headingSize?: string,
   backgroundColor?: string,
