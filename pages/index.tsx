@@ -1,7 +1,7 @@
 import { getUnitList, Unit, getImageFromRef, statusBorderClassMap, unitFactModel, UnitFactModelType } from 'data-access'
 import Link from 'next/link'
 import type { GetStaticProps, NextPage } from 'next'
-import { StatusBadge } from '../components/unit-list/status-badge'
+import { StatusBadge } from '../components/general/status-badge'
 import { Favorite } from '../components/general/favorite'
 import { UnitFact } from '../components/general/unit-fact'
 
@@ -40,10 +40,10 @@ const ListPage: NextPage<Props> = ({ units }) => {
               </div>
               <div className="flex md:flex-row divide-x">
                 <UnitFact heading="Price" model={new unitFactModel(UnitFactModelType.Currency, unit, unit.price )} textClass="text-lg" headingSize='h3' backgroundColor="bg-white"/>
-               <UnitFact heading="Monthly Fee"  model={new unitFactModel(UnitFactModelType.Currency, unit, unit.monthlyFee )} textClass="text-lg" backgroundColor="bg-white"/>
-                <UnitFact heading="Rooms" model={new unitFactModel(UnitFactModelType.Integer, unit, unit.rooms )}  textClass="text-lg" backgroundColor="bg-lightGrey"/>
-                <UnitFact heading="Area" model={new unitFactModel(UnitFactModelType.Area, unit, unit.livingArea )} textClass="text-lg" backgroundColor="bg-lightGrey"/>
-                <UnitFact heading="Floor" model={new unitFactModel(UnitFactModelType.Integer, unit, unit.floor )} textClass="text-lg" backgroundColor="bg-lightGrey"/>
+                <UnitFact heading="Monthly Fee"  model={new unitFactModel(UnitFactModelType.Currency, unit, unit.monthlyFee )} textClass="text-lg" headingSize='h3' backgroundColor="bg-white"/>
+                <UnitFact heading="Rooms" model={new unitFactModel(UnitFactModelType.Integer, unit, unit.rooms )}  textClass="text-lg"  headingSize='h3'backgroundColor="bg-lightGrey"/>
+                <UnitFact heading="Area" model={new unitFactModel(UnitFactModelType.Area, unit, unit.livingArea )} textClass="text-lg"  headingSize='h3' backgroundColor="bg-lightGrey"/>
+                <UnitFact heading="Floor" model={new unitFactModel(UnitFactModelType.Integer, unit, unit.floor )} textClass="text-lg"  headingSize='h3' backgroundColor="bg-lightGrey"/>
               </div>
 
             </div>

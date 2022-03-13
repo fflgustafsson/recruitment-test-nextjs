@@ -1,5 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
-import { StatusBadge } from 'components/unit-list/status-badge'
+import { StatusBadge } from 'components/general/status-badge'
 import { AreaUnit, getImageFromRef, Unit, UnitStatus } from 'data-access'
 import type { NextPage } from 'next'
 

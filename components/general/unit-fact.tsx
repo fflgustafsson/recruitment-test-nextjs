@@ -11,8 +11,14 @@ export interface UnitFactProps {
 
 export function UnitFact({ heading, textClass, headingSize, backgroundColor, model }: UnitFactProps) {
 
+  let flexBasisMobile = 'basis-1/3';
+
+  if (backgroundColor == 'bg-white') {
+    flexBasisMobile = 'basis-1/2';
+  }
+
   return (
-    <div className={`${backgroundColor} flex-1 text-center p-2`}>
+    <div className={`${backgroundColor} ${flexBasisMobile} md:flex-1 text-center p-2.5 flex flex-col justify-center `}>
       {
         headingSize === 'h2'
           ?

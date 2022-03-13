@@ -1,5 +1,9 @@
-import { getUnit, Unit } from 'data-access'
+import { getUnit, Unit, getImageFromRef, unitFactModel, UnitFactModelType } from 'data-access'
 import { GetStaticPaths, GetStaticProps, NextPage } from 'next'
+
+import { Favorite } from '../../components/general/favorite'
+import { UnitFact } from '../../components/general/unit-fact'
+import { StatusBadge } from '../../components/general/status-badge'
 
 interface Props {
   unit: Unit
@@ -7,12 +11,29 @@ interface Props {
 
 const UnitPage: NextPage<Props> = ({ unit }) => {
   return (
-    <div className="container">
-      <h1 className="text-3xl">{unit.name}</h1>
-      <p>
-        {unit.price}
-      </p>
-    </div>
+    <>
+      {unit.primaryImage ?
+        <div className="w-full max-h-[31.25rem] h-[60vh] overflow-hidden">
+          <img src={getImageFromRef(unit.primaryImage, '2k')} alt="Image Unit" className="w-full object-cover h-full" />
+        </div>
+        : null
+      }
+
+      <div className="container max-w-3xl my-6 text-center">
+        <h1 className="text-3xl font-bold border-b-[3px] border-b-accent inline-block">{unit.name}</h1>
+          
+
+        <div className="flex flex-wrap md:flex-row divide-x drop-shadow-lg my-6">
+          <UnitFact heading="Price" model={new unitFactModel(UnitFactModelType.Currency, unit, unit.price)} textClass="text-2xl" headingSize='h2' backgroundColor="bg-white" />
+          <UnitFact heading="Monthly Fee" model={new unitFactModel(UnitFactModelType.Currency, unit, unit.monthlyFee)} textClass="text-2xl" headingSize='h2' backgroundColor="bg-white" />
+          <UnitFact heading="Rooms" model={new unitFactModel(UnitFactModelType.Integer, unit, unit.rooms)} textClass="text-lg" headingSize='h2' backgroundColor="bg-lightGrey" />
+          <UnitFact heading="Area" model={new unitFactModel(UnitFactModelType.Area, unit, unit.livingArea)} textClass="text-lg" headingSize='h2' backgroundColor="bg-lightGrey" />
+          <UnitFact heading="Floor" model={new unitFactModel(UnitFactModelType.Integer, unit, unit.floor)} textClass="text-lg" headingSize='h2' backgroundColor="bg-lightGrey" />
+        </div>
+
+        <StatusBadge status={unit.status}></StatusBadge>
+      </div>
+    </>
   )
 }
 
