@@ -9,6 +9,9 @@ const UnitPage: NextPage<Props> = ({ unit }) => {
   return (
     <div className="container">
       <h1 className="text-3xl">{unit.name}</h1>
+      <p>
+        {unit.price}
+      </p>
     </div>
   )
 }

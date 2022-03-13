@@ -14,6 +14,8 @@ module.exports = {
         accent: '#00a0c4',
         success: '#42a548',
         error: '#f23b2f',
+        borderGrey: '#e4e3e2',
+        lightGrey: 'rgb(247, 246, 245)',
 
         'status-showroom': 'rgb(89, 141, 201)',
         'status-coming_soon': 'rgb(89, 141, 201)',

@@ -26,6 +26,18 @@ export const statusBgClassMap = {
   [UnitStatus.Removed]: 'bg-status-removed',
 }
 
+export const statusBorderClassMap = {
+  [UnitStatus.Showroom]: 'border-l-status-showroom',
+  [UnitStatus.ComingSoon]: 'border-l-status-coming_soon',
+  [UnitStatus.ForSale]: 'border-l-status-for_sale',
+  [UnitStatus.Reserved]: 'border-l-status-reserved',
+  [UnitStatus.Booked]: 'border-l-status-booked',
+  [UnitStatus.Sold]: 'border-l-status-sold',
+  [UnitStatus.NotForSale]: 'border-l-status-not_for_sale',
+  [UnitStatus.Hidden]: 'border-l-status-hidden',
+  [UnitStatus.Removed]: 'border-l-status-removed',
+}
+
 export const statusNameMap = {
   [UnitStatus.Showroom]: 'Showroom',
   [UnitStatus.ComingSoon]: 'ComingSoon',

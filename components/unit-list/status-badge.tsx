@@ -6,7 +6,7 @@ export interface StatusBadgeProps {
 export function StatusBadge({ status }: StatusBadgeProps) {
   return (
     <span
-      className={`${statusBgClassMap[status]} inline-block px-2 py-1 text-sm rounded-sm text-white uppercase`}
+      className={`${statusBgClassMap[status]} inline-block px-2 py-1 text-xs rounded-sm text-white uppercase`}
     >
       {statusNameMap[status]}
     </span>
